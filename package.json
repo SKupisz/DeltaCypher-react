@@ -9,6 +9,8 @@
     "node-sass": "^4.13.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
+    "react-matrix-effect": "^1.0.1",
+    "react-particles-js": "^2.7.0",
     "react-scripts": "3.3.0"
   },
   "scripts": {
@@ -31,5 +33,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.8.3"
   }
 }
