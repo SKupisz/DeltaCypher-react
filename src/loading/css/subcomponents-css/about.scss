@@ -1,0 +1,107 @@
+@mixin changeIconsSize($delta,$stuff){
+    .describe{
+        .delta-icon{
+            width: $delta;
+            height: auto;
+        }
+        .stuff-icon{
+            width: $stuff;
+            height: auto;
+            @if $stuff > 100px{
+                $new-left: 10px - ($stuff - 100px) / 2;
+                margin: $new-left;
+            }
+            @else if $stuff == 100px{
+                margin-left: 10px;
+            }
+            @else{
+                $new-left: 10px + (100px - $stuff) / 2;
+                margin: $new-left;
+            }
+        }
+    }
+}
+
+.about-mainHeader{
+    width: calc(100% - 20px);
+    text-align: center;
+    font-size: 2.9em;
+    font-family: "Oswald",sans-serif;
+    display: block;
+    padding: 10px;
+    color: white;
+    position: absolute;
+    margin-top: 30px;
+}
+.describe{
+    position: absolute;
+    margin-top: 180px;
+    width: 100%;
+    .describe-content{
+        margin-left: 130px;
+        color: white;
+        font-size: 1.2em;
+        font-family: 'Oswald',sans-serif;
+        width: calc(100% - 180px);
+        padding: 10px;
+    }
+    .delta-icon{
+        width: 50px;
+        height: auto;
+        margin: 40px;
+    }
+    .stuff-icon{
+        width: 100px;
+        height: auto;
+        border-radius: 50%;
+        box-shadow: 1px 1px 10px #fff ;
+        margin-left: 10px;
+    }
+    .stuff-icon,.delta-icon,.describe-content{
+        display: inline;
+        position: absolute;
+    }
+    &:nth-child(3){
+        margin-top: 400px;
+        .describe-content{
+            margin-top: 20px;
+        }
+    }
+}
+@media screen and (max-width: 950px){
+    @include changeIconsSize(50px, 80px);
+    .describe{
+        .describe-content{
+            font-size: 1.1em;
+        }
+    }
+}
+@media screen and (max-width: 650px){
+    @include changeIconsSize(40px, 70px);
+    .describe{
+        margin-top: 120px;
+        .describe-content{
+            font-size: 1em;
+        }
+    }
+}
+@media screen and (max-width: 492px){
+    @include changeIconsSize(30px, 50px);
+    .describe{
+        .delta-icon{
+            margin-right: 20px;
+        }
+        .describe-content{
+            font-size: 0.8em;
+            margin-left: 100px;
+            width: calc(100% - 150px);
+        }
+        &:nth-child(3){
+            margin-top: 430px;
+            margin-bottom: 30px;
+            .describe-content{
+                margin-top: 40px;
+            }
+        }
+    }
+}

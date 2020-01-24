@@ -1,16 +1,17 @@
 import React from 'react';
-import Letters from "./loading/js/components/firstAnimation.jsx";
-import SecondSlide from "./loading/js/components/secondSlide.jsx";
-import MainSite from "./loading/js/components/finalSite.jsx";
+import {BrowserRouter as Router,Route} from 'react-router-dom';
+
+import Together from "./loading/js/components/together.jsx";
+import About from "./loading/js/subcomponents/about.jsx";
 import "./loading/css/main.scss";
-import "./loading/css/secondStage.scss";
-import "./loading/css/final.scss";
+
 function App() {
   return (
     <div className="App">
-      <Letters/>
-      <SecondSlide/>
-      <MainSite/>
+      <Router>
+        <Route exact path = "/" component = {Together}/>
+        <Route path = "/about" component = {About}/>
+      </Router>
     </div>
   );
 }

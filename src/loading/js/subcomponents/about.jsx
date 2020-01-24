@@ -1,38 +1,21 @@
 import React from 'react';
-import {Link} from "react-router-dom";
-import Particles from 'react-particles-js';
+import Particles from "react-particles-js";
 
+import logo2 from "../../../img/logo2.png";
+import ceo from "../../../img/ceo.webp";
 
-export default class MainSite extends React.Component{
-    constructor(props){
-        super(props);
-        this.launch = this.launch.bind(this);
-        this.content = React.createRef();
-        this.particles = React.createRef();
-    }
-    launch(){
-        this.content.current.classList.remove("dissapeared");
-        setTimeout(() => this.content.current.classList.remove("not-visible"),100);
-    }
+export default class About extends React.Component{
     render(){
-        setTimeout(() => this.launch(), 9100); 
         return(
-            <section className="main-content not-visible" ref = {this.content}>
-                <header className="main-header">Delta</header>
-                <section className="short-describe">
-                    The Delta is a small project about cyphering. Our goal? To make securing our data as simple as possible.
+            <section className="about-containter">
+                <header className="about-mainHeader">About us</header>
+                <section className="describe delta-describe">
+                    <img src={logo2} alt="" className = "delta-icon"/>
+                    <div className="describe-content">What is Delta? It's a cyphering system that will secure your text data like a dream. By the construction of our cypher, final cryptogram could be decrypted as even dozens of results. How we are making this that safe? By the cypher structure - during cyphering process, we are using many different mathematic transformations, like integrals, infinitesimal calculus and many others. However, the cyphering process is not fixed - we are still adding more and more calculus to that, becuase we believe this will make our cypher stronger.</div>
                 </section>
-                <section className="short-describe">
-                    During its beginning in February 2019 we have been constantly developing the quality and the level of security we can provide you.
-                </section>
-                <section className="buttons-section">
-                    <Link to = "/about">
-                        <button className="link-button">About us</button>
-                    </Link>
-                    <Link to = "/panel">
-                        <button className="link-button">Cyphering panel</button>
-                    </Link>
-                    
+                <section className="describe stuff-describe">
+                    <img src={ceo} alt="" className = "stuff-icon"/>
+                    <div className="describe-content">Simon Kupisz - Founder and CEO</div>
                 </section>
                 <Particles ref = {this.particles} width = {"100%"} className = "particles-content"
                 params = {{ 
@@ -74,7 +57,6 @@ export default class MainSite extends React.Component{
                     }
                 }}/>
             </section>
-        )
+        );
     }
 }
-//
