@@ -34,7 +34,7 @@ export default class MainSite extends React.Component{
                     </Link>
                     
                 </section>
-                <Particles ref = {this.particles} width = {"100%"} className = "particles-content"
+                <Particles ref = {this.particles} width = {"100%"} className = "particles-content" id = "particles-content"
                 params = {{ 
                     particles: {
                         size: {

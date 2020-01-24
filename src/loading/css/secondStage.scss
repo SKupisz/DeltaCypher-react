@@ -1,3 +1,19 @@
+@mixin changeFontSize($newHeaderSize,$newSubSize,$newQuestionSize){
+    $left-margin: 40*(2.7em / $newQuestionSize);
+    .second-stage{
+        header[class="main-header"]{
+            font-size: $newHeaderSize;
+        }
+        .sub-headers{
+            font-size: $newSubSize;
+        }
+        .final-question{
+            font-size: $newQuestionSize;
+            width: percentage($left-margin / 100);
+        }
+    }
+}
+
 .second-stage{
     font-family: "Oswald",sans-serif;
 }
@@ -10,6 +26,9 @@
     background: url("../../img/Orion_Belt.jpg");
     background-size: cover;
     color: white;
+    header[class="main-header"],.sub-headers,.final-question{
+        text-shadow: 2px 2px rgba(1,1,1,.2);  
+    }
     header[class="main-header"]{
         font-size: 4.1em;
         display: block;
@@ -17,21 +36,35 @@
         margin-right: auto;
         margin-top: 120px;
         text-align: center;
-        text-shadow: 2px 2px rgba(1,1,1,.2);
+    }
+    .sub-headers{
+        width: 60%;
+        display: block;
+        margin-left: 20%;
+        font-size: 2em;
+    }
+    .final-question{
+        font-size: 2.7em;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 70px;
+        text-align: left;
+        width: 40%;
     }
 }
-.sub-headers{
-    width: 60%;
-    display: block;
-    margin-left: 20%;
-    font-size: 2em;
+
+@media screen and (max-width: 1020px){
+    @include changeFontSize(3em, 1.8em, 2em);
 }
-.final-question{
-    font-size: 2.7em;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 70px;
-    text-align: left;
-    width: 40%;
+@media screen and (max-width: 730px){
+    @include changeFontSize(2.2em, 1.2em, 1.8em);
+}
+@media screen and (max-width: 520px){
+    @include changeFontSize(2em, 1.1em, 1.6em);
+}
+@media screen and (max-width: 490px){
+    .sub-headers{
+        margin-left: 10%;
+    }
 }

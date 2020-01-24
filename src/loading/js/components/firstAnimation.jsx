@@ -21,8 +21,8 @@ export default class Letters extends React.Component{
     render(){
         setTimeout(() => this.changeLetters(),4000);
         return(
-            <section class = "first-stage" ref = {this.all}>
-            <header class = "welcome-header" ref = {this.welcomeHeader}>
+            <section className = "first-stage" ref = {this.all}>
+            <header className = "welcome-header" ref = {this.welcomeHeader}>
                 <FirstStageContent firstletter = "Z" secondletter="%"/>
                 <FirstStageContent firstletter = "!" secondletter="Q"/>
                 <FirstStageContent firstletter = "A" secondletter=":"/>

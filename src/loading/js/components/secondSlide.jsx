@@ -19,7 +19,7 @@ export default class SecondSlide extends React.Component{
     render(){
         setTimeout(() => this.launchSecondSection(), 6000);
         return(
-        <section class = "second-stage dissapeared not-visible" ref = {this.all}>
+        <section className = "second-stage dissapeared not-visible" ref = {this.all}>
             <header className="main-header">What is delta?</header>
             <section className="sub-headers">
                 <div className="question bird">Is it a bird? - No!</div>
