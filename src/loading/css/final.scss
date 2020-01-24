@@ -1,5 +1,7 @@
 body{
     background: #111;
+    margin: 0;
+    padding: 0;
     overflow-y: hidden;
 }
 .main-content{
@@ -15,7 +17,7 @@ body{
         margin-top: 50px;
     }
     .particles-content{
-        height: 70%;
+        height: 30%;
     }
     .short-describe{
         font-size: 1.4em;

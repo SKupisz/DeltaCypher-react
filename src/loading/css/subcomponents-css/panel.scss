@@ -1,0 +1,123 @@
+@keyframes startingTheCyphering {
+    0%{
+        filter: brightness(200%);
+    }
+    50%{
+        filter: brightness(0%);
+    }
+    100%{
+        filter: brightness(200%);
+    }
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.panel-container{
+    .form-mainHeader{
+        width: calc(100% - 20px);
+        text-align: center;
+        padding: 10px;
+        font-size: 3.6em;
+        font-family: "Oswald",sans-serif;
+        background-image: url("../../../img/IntroTheShadow_apod2.png");
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        text-shadow: 1px 1px 10px #222;
+        filter: brightness(200%);
+        animation-name: startingTheCyphering;
+        animation-duration: 0.01s;
+        animation-iteration-count: 4;
+        animation-delay: 2s;
+        margin-bottom: 30px;
+    }
+    .auth-keyInput{
+        width: calc(55% - 20px);
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        padding: 10px;
+        font-size: 1.2em;
+        font-family: "Oswald",sans-serif;
+        border: 1px solid white;
+        border-radius: 10px;
+        margin-bottom: 13px;
+    }
+    .auth-keyInput:focus{
+        outline: none;
+    }
+    .cypher-content{
+        min-width: calc(50% - 16px);
+        max-width: calc(50% - 16px);
+        min-height: 250px;
+        padding: 8px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 5px;
+        font-family: "Lato",sans-serif;  
+        font-size: 0.9em;   
+        margin-bottom: 13px;   
+    }
+    .goCyphering{
+        padding: 15px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 8px;
+        font-size: 1.4em;
+        font-family: "Oswald",sans-serif;
+        min-width: calc(20% - 30px);
+        border-radius: 5px;
+        border: none;
+        background: url("../../../img/Orion_Belt.jpg");
+        color: white;
+        cursor: pointer;
+        transition: all 0.3s;
+    }
+    button[class="goCyphering"]:hover{
+        filter: brightness(120%);
+    }
+}
+@media screen and (max-width: 980px){
+    .panel-container{
+        .cypher-content{
+            min-width: calc(70% - 20px);
+            max-width: calc(70% - 20px);
+        }
+        .auth-keyInput{
+            font-size: 1.1em;
+            width: calc(70% - 20px);
+        }
+    }
+}
+@media screen and (max-width: 690px){
+    .panel-container{
+        .form-mainHeader{
+            font-size: 2.9em;
+        }
+        .goCyphering{
+            width: calc(40% - 30px);
+            font-size: 1.1em;
+        }
+    }
+}
+@media screen and (max-width: 450px){
+    .panel-container{
+        .form-mainHeader{
+            font-size: 2.4em;
+        }
+        .cypher-content{
+            min-width: calc(85% - 20px);
+            max-width: calc(85% - 20px);
+            font-size: 0.8em;
+        }
+        .auth-keyInput{
+            width: calc(85% - 20px);
+            font-size: 0.9em;
+        }
+    }
+}
