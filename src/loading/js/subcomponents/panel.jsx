@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "react-router-dom";
 
 export default class Panel extends React.Component{
     render(){
@@ -10,6 +11,14 @@ export default class Panel extends React.Component{
                     <textarea placeholder = "Your text here..." name="cypher-content" className="cypher-content"></textarea>
                     <button type="submit" className="goCyphering">Encrypt</button>
                 </form>
+                <section className="buttons-section">
+                    <Link to = "/home">
+                        <button className="link-button">Home</button>
+                    </Link>
+                    <Link to = "/about">
+                        <button className="link-button">About us</button>
+                    </Link>
+                </section>
             </section>
         );
     }

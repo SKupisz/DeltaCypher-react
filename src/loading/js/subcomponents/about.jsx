@@ -1,5 +1,6 @@
 import React from 'react';
 import Particles from "react-particles-js";
+import {Link} from "react-router-dom";
 
 import logo2 from "../../../img/logo2.png";
 import ceo from "../../../img/ceo.webp";
@@ -16,6 +17,14 @@ export default class About extends React.Component{
                 <section className="describe stuff-describe">
                     <img src={ceo} alt="" className = "stuff-icon"/>
                     <div className="describe-content">Simon Kupisz - Founder and CEO</div>
+                </section>
+                <section className="buttons-section">
+                    <Link to = "/home">
+                        <button className="link-button">Home</button>
+                    </Link>
+                    <Link to = "/panel">
+                        <button className="link-button">Cyphering panel</button>
+                    </Link>    
                 </section>
                 <Particles ref = {this.particles} width = {"100%"} className = "particles-content"
                 params = {{ 
@@ -56,6 +65,7 @@ export default class About extends React.Component{
                         }
                     }
                 }}/>
+
             </section>
         );
     }

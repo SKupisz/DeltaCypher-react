@@ -81,6 +81,7 @@ body{
     button[class="goCyphering"]:hover{
         filter: brightness(120%);
     }
+    @include menuButtons(30px);
 }
 @media screen and (max-width: 980px){
     .panel-container{
@@ -119,5 +120,21 @@ body{
             width: calc(85% - 20px);
             font-size: 0.9em;
         }
+    }
+}
+
+@media screen and (max-width: 505px){
+    .panel-container{
+        @include scalingButtons(1.2em);
+    }
+}
+@media screen and (max-width: 380px){
+    .panel-container{
+        @include scalingButtons(1em);
+    }
+}
+@media screen and (max-width: 320px){
+    .panel-container{
+        @include scalingButtons(0.87em);
     }
 }

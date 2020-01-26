@@ -21,7 +21,6 @@
         }
     }
 }
-
 .about-mainHeader{
     width: calc(100% - 20px);
     text-align: center;
@@ -67,7 +66,10 @@
             margin-top: 20px;
         }
     }
+    
 }
+@include menuButtons(520px);
+
 @media screen and (max-width: 950px){
     @include changeIconsSize(50px, 80px);
     .describe{
@@ -97,11 +99,26 @@
             width: calc(100% - 150px);
         }
         &:nth-child(3){
-            margin-top: 430px;
+            margin-top: 330px;
             margin-bottom: 30px;
             .describe-content{
                 margin-top: 40px;
             }
         }
     }
+}
+
+@media screen and (max-width: 505px){
+    @include scalingButtons(1.2em);
+}
+@media screen and (max-width: 380px){
+    @include scalingButtons(1em);
+    .describe{
+        &:nth-child(3){
+            margin-top: 410px;
+        }
+    }
+}
+@media screen and (max-width: 320px){
+    @include scalingButtons(0.87em);
 }
