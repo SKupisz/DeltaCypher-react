@@ -68,6 +68,22 @@
     }
     
 }
+
+.speech-container{
+    .rs-play{
+        width: 30px;
+        height: 30px;
+        font-size: 20px;
+        color: #fff !important;
+        background-color: transparent !important;
+        border: none !important;
+        filter: grayscale(100%) brightness(140%);
+        position: absolute;
+        margin-top: 100px;
+        margin-left: 45px;
+    }
+}
+
 @include menuButtons(520px);
 
 @media screen and (max-width: 950px){
@@ -84,6 +100,13 @@
         margin-top: 120px;
         .describe-content{
             font-size: 1em;
+        }
+    }
+    .speech-container{
+        .rs-play{
+            margin-top: 90px;
+            margin-left: 43px;
+            font-size: 18px;
         }
     }
 }
@@ -104,6 +127,13 @@
             .describe-content{
                 margin-top: 40px;
             }
+        }
+    }
+    .speech-container{
+        .rs-play{
+            margin-top: 80px;
+            margin-left: 40px;
+            font-size: 16px;
         }
     }
 }
